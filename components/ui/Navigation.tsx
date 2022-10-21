@@ -1,8 +1,10 @@
 const Navigation = () => {
   return (
-    <>
-      <div className=" fixed top-20">Navigatsdion</div>
-    </>
+    <div className="py-10 w-full h-full ">
+      <div className="flex justify-end items-center ">
+        <ul></ul>
+      </div>
+    </div>
   );
 };
 
