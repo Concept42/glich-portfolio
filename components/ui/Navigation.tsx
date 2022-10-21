@@ -3,6 +3,7 @@ import Link from 'next/link'
 import BasicButton from './BasicButton'
 import Hamburger from './Hamburger'
 import { useState } from 'react'
+import MobileMenu from './MobileMenu'
 
 const Navigation = () => {
   const [openHamburger, setOpenHamburger] = useState<boolean>(false)
@@ -33,6 +34,7 @@ const Navigation = () => {
           <Hamburger isOpen={openHamburger} />
         </div>
       </div>
+      {openHamburger ? <MobileMenu /> : ''}
     </div>
   )
 }
