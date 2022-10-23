@@ -1,9 +1,17 @@
 import type { Children } from '../../library/types'
+import Navigation from '../ui/Navigation'
+import useHamburger from '../../library/hooks/useHamburger'
+import SocialIcons from '../ui/SocialIcons'
+
 export const AppLaylout = ({ children }: Children) => {
+  const { open, handleOpen } = useHamburger()
+
   return (
     <>
-      <div className='flex items-center justify-center w-screen h-screen bg-primary-orange fixed '>
-        <div className='w-[95vw] h-[95vh] md:w-[97vw] md:h-[94vh] bg-white '>{children}</div>
+      <div className='flex items-center justify-center w-screen h-screen bg-primary-orange'>
+        <Navigation open={open} handleOpen={handleOpen} />
+        <SocialIcons />
+        <div className='w-[calc(100vw-50px)] h-[calc(100vh-50px)] bg-white'>{children}</div>
       </div>
     </>
   )

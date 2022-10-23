@@ -13,11 +13,8 @@ const Home: NextPage = () => {
 
   return (
     <PageWrapper>
-      <div>
-        <Navigation open={open} handleOpen={handleOpen} />
-      </div>
       {!open ? (
-        <div className='flex flex-col w-full justify-center items-center gap-4 md:gap-4'>
+        <div className='flex flex-col w-full h-full justify-center items-center gap-4 md:gap-4'>
           <GlichText> I&apos;M ZORAN LATKOVIĆ</GlichText>
           <AnimatedText></AnimatedText>
           <div className='mt-5'>
@@ -27,9 +24,6 @@ const Home: NextPage = () => {
       ) : (
         ''
       )}
-      <div className='flex gap-5 w-full justify-end items-center p-10'>
-        <SocialIcons />
-      </div>
     </PageWrapper>
   )
 }

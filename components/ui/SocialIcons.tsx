@@ -5,7 +5,7 @@ import React from 'react'
 
 const SocialIcons = () => {
   return (
-    <>
+    <div className='flex fixed bottom-20 right-20 gap-5'>
       {socials.map((social, index) => {
         return (
           <ul key={index}>
@@ -15,7 +15,7 @@ const SocialIcons = () => {
           </ul>
         )
       })}
-    </>
+    </div>
   )
 }
 
