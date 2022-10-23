@@ -5,14 +5,12 @@ import Hamburger from './Hamburger'
 import { useState } from 'react'
 import MobileMenu from './MobileMenu'
 
-const Navigation = () => {
-  const [openHamburger, setOpenHamburger] = useState<boolean>(false)
+interface Props {
+  open: boolean
+  handleOpen: () => void
+}
 
-  const handleHamburger = () => {
-    setOpenHamburger(!openHamburger)
-    const openModal = document.getElementById()
-  }
-
+const Navigation = ({ open, handleOpen }: Props) => {
   return (
     <div>
       <div className='flex justify-between items-center gap-10 p-10'>
@@ -29,13 +27,13 @@ const Navigation = () => {
           })}
         </ul>
         <div className='hidden md:flex'>
-          <BasicButton>Let&apos;s chat</BasicButton>
+          <BasicButton>My Work</BasicButton>
         </div>
-        <div onClick={handleHamburger} className='md:hidden'>
-          <Hamburger isOpen={openHamburger} />
+        <div onClick={handleOpen} className='md:hidden'>
+          <Hamburger isOpen={open} />
         </div>
       </div>
-      <div>{openHamburger ? <MobileMenu /> : ''}</div>
+      <div>{open ? <MobileMenu /> : ''}</div>
     </div>
   )
 }
