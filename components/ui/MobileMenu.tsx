@@ -4,7 +4,7 @@ import { navItems } from '../../library/data'
 
 const MobileMenu = () => {
   return (
-    <div className='md:hidden flex items-start justify-center  w-full h-[10vh] bg-white mt-10 '>
+    <div className='md:hidden flex items-start justify-center  w-full h-[80vh] bg-white mt-10 '>
       <ul className='flex flex-col gap-10 justify-center items-center'>
         {navItems.map((item, index) => {
           return (

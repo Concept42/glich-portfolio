@@ -10,6 +10,7 @@ const Navigation = () => {
 
   const handleHamburger = () => {
     setOpenHamburger(!openHamburger)
+    const openModal = document.getElementById()
   }
 
   return (
@@ -34,7 +35,7 @@ const Navigation = () => {
           <Hamburger isOpen={openHamburger} />
         </div>
       </div>
-      {openHamburger ? <MobileMenu /> : ''}
+      <div>{openHamburger ? <MobileMenu /> : ''}</div>
     </div>
   )
 }
