@@ -23,7 +23,7 @@ const Home: NextPage = () => {
           <GlichText> I&apos;M ZORAN LATKOVIĆ</GlichText>
           <AnimatedText></AnimatedText>
           <div className='mt-5'>
-            <BasicButton>Let&apos;s chat</BasicButton>
+            <BasicButton>My Work</BasicButton>
           </div>
         </div>
       ) : (
