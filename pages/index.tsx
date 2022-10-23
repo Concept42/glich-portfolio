@@ -5,16 +5,14 @@ import AnimatedText from '../components/ui/AnimatedText'
 import SocialIcons from '../components/ui/SocialIcons'
 import BasicButton from '../components/ui/BasicButton'
 import { useEffect, useState } from 'react'
+import PageWrapper from '../components/layout/PageWrapper'
+import useHamburger from '../library/hooks/useHamburger'
 
 const Home: NextPage = () => {
-  const [open, setOpen] = useState<boolean>(false)
-
-  const handleOpen = () => {
-    setOpen(!open)
-  }
+  const { open, handleOpen } = useHamburger()
 
   return (
-    <div className='flex flex-col h-full container  mx-auto max-w-full justify-between'>
+    <PageWrapper>
       <div>
         <Navigation open={open} handleOpen={handleOpen} />
       </div>
@@ -32,7 +30,7 @@ const Home: NextPage = () => {
       <div className='flex gap-5 w-full justify-end items-center p-10'>
         <SocialIcons />
       </div>
-    </div>
+    </PageWrapper>
   )
 }
 

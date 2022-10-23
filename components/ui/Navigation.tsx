@@ -2,7 +2,6 @@ import { navItems } from '../../library/data'
 import Link from 'next/link'
 import BasicButton from './BasicButton'
 import Hamburger from './Hamburger'
-import { useState } from 'react'
 import MobileMenu from './MobileMenu'
 
 interface Props {
