@@ -9,3 +9,12 @@
     @apply font-roboto;
   }
 }
+
+@layer utilities {
+  .w-display {
+    width: calc(100vw - 50px);
+  }
+  .h-display {
+    height: calc(100vh - 50px);
+  }
+}

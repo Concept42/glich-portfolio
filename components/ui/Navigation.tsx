@@ -11,7 +11,7 @@ interface Props {
 
 const Navigation = ({ open, handleOpen }: Props) => {
   return (
-    <div className="fixed top-10 w-full ">
+    <div className="fixed top-10 w-full z-50 ">
       <div className="flex justify-between items-center gap-10 px-28 py-10">
         <h3>Zoran Latković</h3>
         <ul className="hidden md:flex gap-10 ">
