@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import { openHamburger, toggleOpen } from "../../Toolkit/themeSlice";
+import { useAppDispatch, useAppSelector } from "./reduxHooks";
 
 const useHamburger = () => {
-  const [open, setOpen] = useState<boolean>(false)
+  const dispatch = useAppDispatch();
+  const open = useAppSelector(openHamburger);
 
   const handleOpen = () => {
-    setOpen(!open)
-  }
+    dispatch(toggleOpen());
+  };
 
-  return { open, handleOpen }
-}
+  return { open, handleOpen };
+};
 
-export default useHamburger
+export default useHamburger;

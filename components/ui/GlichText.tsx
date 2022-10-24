@@ -1,13 +1,13 @@
-import React from 'react'
-import { useGlitch } from 'react-powerglitch'
+import React from "react";
+import { useGlitch } from "react-powerglitch";
 
 interface Props {
-  children: string
+  children: string;
 }
 
 const GlichText = ({ children }: Props) => {
   const glich = useGlitch({
-    playMode: 'always',
+    playMode: "always",
     createContainers: true,
     hideOverflow: false,
     timing: {
@@ -29,12 +29,12 @@ const GlichText = ({ children }: Props) => {
       maxHeight: 0.15,
       hueRotate: true,
     },
-  })
+  });
   return (
-    <h1 className='text-[8vw] md:text-[68px] font-normal' ref={glich.ref}>
+    <h1 className="text-[7vw] md:text-[68px] font-semibold" ref={glich.ref}>
       {children}
     </h1>
-  )
-}
+  );
+};
 
-export default GlichText
+export default GlichText;
